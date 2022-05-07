@@ -8,9 +8,9 @@ namespace SchoolRegister.Model.DataModels
     public enum RoleValue
     {
         User = 1,
-        Student = 1,
-        Parent = 1,
-        Teacher = 1,
-        Admin = 1,
+        Student = 2,
+        Parent = 3,
+        Teacher = 4,
+        Admin = 5,
     }
 }

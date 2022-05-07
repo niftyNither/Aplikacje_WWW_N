@@ -9,13 +9,14 @@ namespace SchoolRegister.Model.DataModels
 {
     public class Student : User
     {
-        public virtual Group Group { get; set; }
+        public virtual Group? Group { get; set; }
         [ForeignKey("Group")]
         public int? GroupId { get; set; }
-        public IList <Grade> Grades { get; set; }
-        public Parent Parent { get; set; }
+        public virtual IList<Grade>? Grades { get; set; }
+        
+        [ForeignKey ("ParentId")]
+        public virtual Parent? Parent { get; set; }
 
-        [ForeignKey ("Parent")]
         public int? ParentId { get; set; }
 
         [NotMapped]
